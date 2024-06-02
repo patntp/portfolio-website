@@ -1,11 +1,19 @@
+'use client'
+
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
+import React, { useState } from "react";
 import { AiOutlineClose, AiOutlineMenu, AiTwotoneMail } from "react-icons/ai";
 import { BsPersonLinesFill } from "react-icons/bs";
 import { FaGithub, FaLinkedin, } from "react-icons/fa";
 
 export default function Navbar() {
+  const [sideNav, setSideNav] = useState<boolean>(false);
+
+  const handleNav = () => {
+    setSideNav(!sideNav);
+  }
+
   return (
     <div className="fixed w-full h-20 shadow-xl z-[100]">
       <div className="flex justify-between items-center w-full h-full px-2 2xl:px-16">
@@ -30,19 +38,24 @@ export default function Navbar() {
           </ul>
 
           {/* for small devices */}
-          <div className="md:hidden">
-            <AiOutlineMenu size={25} />
+          <div className="md:hidden cursor-pointer">
+            <AiOutlineMenu size={25} onClick={handleNav} />
           </div>
         </div>
       </div>
 
-      <div className="fixed left-0 top-0 w-full h-screen bg-black/70">
-        <div className="fixed right-0 top-0 w-[75%] sm:w-[60%] md:w-[45%] h-screen bg-[#ecf0f3] p-10 ease-in duration-500">
+      <div className={sideNav ? 'md:hidden fixed left-0 top-0 w-full h-screen bg-black/70' : ''}>
+        <div className={
+            sideNav
+              ? "fixed right-0 top-0 w-[75%] sm:w-[60%] md:w-[45%] h-screen bg-[#ecf0f3] p-10 ease-in duration-500"
+              : "fixed right-[-100%] top-0 p-10 ease-in duration-500"
+            }
+          >
           <div>
               <div className="flex w-full items-center justify-between">
                 <Image src="../public/assets/next.svg" alt="/" width="87" height="35" />
                 <div className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer">
-                  <AiOutlineClose />
+                  <AiOutlineClose onClick={handleNav}/>
                 </div>
               </div>
               <div className="border-b border-gray-300 my-4">
