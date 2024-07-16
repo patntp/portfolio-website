@@ -2,20 +2,32 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { AiOutlineClose, AiOutlineMenu, AiTwotoneMail } from "react-icons/ai";
 import { BsPersonLinesFill } from "react-icons/bs";
 import { FaGithub, FaLinkedin, } from "react-icons/fa";
 
 export default function Navbar() {
   const [sideNav, setSideNav] = useState<boolean>(false);
+  const [shadow, setShadow] = useState<boolean>(false);
 
   const handleNav = () => {
     setSideNav(!sideNav);
   }
 
+  useEffect(() => {
+    const handleShadow = () => {
+      if (window.scrollY >= 90){
+        setShadow(true);
+      } else {
+        setShadow(false);
+      }
+    };
+    window.addEventListener('scroll', handleShadow);
+  }, []);
+
   return (
-    <div className="fixed w-full h-20 shadow-xl z-[100]">
+    <div className={shadow ? "fixed w-full h-20 shadow-xl z-[100]" : "fixed w-full h-20 z-[100]"}>
       <div className="flex justify-between items-center w-full h-full px-2 2xl:px-16">
         <Image src="/assets/next.svg" alt="/" width="50" height="50" />
         <div>
