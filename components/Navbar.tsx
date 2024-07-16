@@ -28,6 +28,7 @@ export default function Navbar() {
 
   return (
     <div
+      style={{ backgroundColor: '#ecf0f3' }}
       className={
         shadow
           ? "fixed w-full h-20 shadow-xl z-[100]"
