@@ -126,7 +126,7 @@ export default function Navbar() {
                   </a>
                 </div>
                 <div className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300">
-                  <a href="mailto:patnao@hotmail.com">
+                  <a href={`mailto:${process.env.EMAIL}`}>
                     <AiTwotoneMail />
                   </a>
                 </div>
