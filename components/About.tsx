@@ -27,8 +27,7 @@ const About = () => {
           </p>
         </div>
         <div className="w-full h-auto m-auto shadow-xl shadow-gray-400 rounded-xl flex items-center justify-center p-4 hover:scale-105 ease-in duration-300">
-          <img src="" alt="/" />
-          {/* or use Image from nextjs to do lazy loading but need to modify config file if use external src*/}
+          <img src="/assets/about.jpg" alt="/" />
         </div>
       </div>
     </div>

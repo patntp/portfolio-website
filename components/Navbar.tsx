@@ -37,7 +37,7 @@ export default function Navbar() {
     >
       <div className="flex justify-between items-center w-full h-full px-2 2xl:px-16">
         <Link href={"/"}>
-          <Image src="/assets/next.svg" alt="/" width="50" height="50" />
+          <Image src="/assets/logo.png" alt="/" width="50" height="50" />
         </Link>
         <div>
           <ul className="hidden md:flex">
@@ -83,7 +83,7 @@ export default function Navbar() {
         >
           <div>
             <div className="flex w-full items-center justify-between">
-              <Image src="/assets/next.svg" alt="/" width="87" height="35" />
+              <Image src="/assets/logo.png" alt="/" width="87" height="35" />
               <div className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer">
                 <AiOutlineClose onClick={handleNav} />
               </div>
