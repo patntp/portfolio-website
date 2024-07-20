@@ -25,12 +25,11 @@ const Contact = () => {
                 />
               </div>
               <div>
-                <h2 className="py-2">Nuttapat Naothaworn</h2>
-                <p>Full-Stack Developer</p>
-                <p className="py-4">Looking for</p>
+                <h2 className="py-4">Nuttapat Naothaworn</h2>
+                <p>Software Developer</p>
               </div>
               <div>
-                <p className="uppercase pt-8">Reach Me At</p>
+                <p className="uppercase pt-10">Reach Me At</p>
                 <div className="flex items-center justify-between py-4">
                   <div className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-125 ease-in duration-300">
                     <a href="https://www.linkedin.com/in/nuttapat-naothaworn-a3827517b" target="_blank" rel="noopener noreferrer">

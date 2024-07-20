@@ -33,7 +33,7 @@ const Main = () => {
           {/* add functionality to greet by time and name's color changes by time */}
           <h1 className="py-4 text-gray-700 duration-1000">Good {timeOfDay}, I am <span className={nameColor}>Pat</span></h1>
           <h1 className="py-2 text-gray-700">A Software Developer</h1>
-          <p className="py-4 text-gray-600 max-w-[70%] m-auto">Summary</p>
+          <p className="py-4 text-gray-600 max-w-[70%] m-auto">I am a full-stack developer with experience in web development and AI. I enjoy tackling diverse challenges and am always ready to pick up new programming languages for innovative projects.</p>
 
           <div className="flex items-center justify-between max-w-[330px] m-auto py-4">
             <div className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-125 ease-in duration-300">
